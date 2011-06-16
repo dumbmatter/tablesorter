@@ -1,0 +1,3 @@
+This is a fork of Christian Bach's http://tablesorter.com/docs/ jQuery Tablesorter 2.0.5b plugin, to fix a bug concerning multiple <tr> tags within a <thead>. In the original version, only the <th> in the lowest row is highlighted when the column is sorter. In my version, all <th>s in the column are highlighted, which I think is a more sensible behavior.
+
+-- by Jeremy Scheff
