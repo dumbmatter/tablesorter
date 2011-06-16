@@ -540,17 +540,16 @@
                 // remove all header information
                 $headers.removeClass(css[0]).removeClass(css[1]);
 
-                var h = [];
+                var l = list.length;
                 $headers.each(function (offset) {
                     if (!this.sortDisabled) {
-                        h[this.column] = $(this);
+                        for (var i = 0; i < l; i++) {
+                            if (list[i][0] == this.column) {
+                                $(this).addClass(css[list[i][1]]);
+                            }
+                        }
                     }
                 });
-
-                var l = list.length;
-                for (var i = 0; i < l; i++) {
-                    h[list[i][0]].addClass(css[list[i][1]]);
-                }
             }
 
             function fixColumnWidth(table, $headers) {
